@@ -28,6 +28,7 @@
 #include <string.h>
 #include <libintl.h>
 #include <locale.h> 
+#include <math.h>
 
 #define _(cadena) gettext(cadena)
 
@@ -51,18 +52,18 @@ int print_menu()
     mvprintw (rrow+i,bcol,_("6.  cosine"));
     i++; //5
     mvprintw (rrow+i,acol,_("7.  tangent") );
-    mvprintw (rrow+i,bcol,_("8.  absolute value of a floating"));
+    mvprintw (rrow+i,bcol,_("8.  atan"));
     i++; //6
-    mvprintw (rrow+i,acol,_("9.  the floating remainder of x / y"));
-    mvprintw (rrow+i,bcol,_("10. the cube root of"));
+    mvprintw (rrow+i,acol,_("9.  atan2"));
+    mvprintw (rrow+i,bcol,_("10. acos"));
     i++; //7
-    mvprintw (rrow+i,acol,_("11. the length of the hypotenuse x y"));
+    mvprintw (rrow+i,acol,_("11. asin"));
     mvprintw (rrow+i,bcol,_("12. square"));
     i++; //8
-    mvprintw (rrow+i,acol,_("13. floor"));
-    mvprintw (rrow+i,bcol,_("14. ceil"));
+    mvprintw (rrow+i,acol,_("13. pow"));
+    mvprintw (rrow+i,bcol,_("14. log"));
     i++; //9
-    mvprintw (rrow+i,acol,_("15. frexp"));
+    mvprintw (rrow+i,acol,_("15. log10"));
     mvprintw (rrow+i,bcol,_("16. ldexp"));
     i++; //10
     mvprintw (rrow+i,acol,_("17. exp"));
@@ -71,35 +72,11 @@ int print_menu()
     mvprintw (rrow+i,acol,_("19. sinh"));
     mvprintw (rrow+i,bcol,_("20. tanh"));
     i++; //12
-    mvprintw (rrow+i,acol,_("21. acos"));
-    mvprintw (rrow+i,bcol,_("22. asin"));
+    mvprintw (rrow+i,acol,_("21. isnan"));
+    mvprintw (rrow+i,bcol,_("22. fmax"));
     i++; //13
-    mvprintw (rrow+i,acol,_("23. atan"));
-    mvprintw (rrow+i,bcol,_("24. atan2"));
-    i++; //14
-    mvprintw (rrow+i,acol,_("25. log"));
-    mvprintw (rrow+i,bcol,_("26. log10"));
-    i++; //15
-    mvprintw (rrow+i,acol,_("27. pow"));
-    mvprintw (rrow+i,bcol,_("28. isnan"));
-    i++; //16
-    mvprintw (rrow+i,acol,_("29. isinf"));
-    mvprintw (rrow+i,bcol,_("30. isfinite"));
-    i++; //17
-    mvprintw (rrow+i,acol,_("31. copysign"));
-    mvprintw (rrow+i,bcol,_("32. signbit"));
-    i++; //18
-    mvprintw (rrow+i,acol,_("33. fdim"));
-    mvprintw (rrow+i,bcol,_("34. fma"));
-    i++; //19
-    mvprintw (rrow+i,acol,_("35. fmax"));
-    mvprintw (rrow+i,bcol,_("36. fmin"));
-    i++; //20
-    mvprintw (rrow+i,acol,_("37. trunc"));
-    mvprintw (rrow+i,bcol,_("38. round"));
-    i++; //21
-    mvprintw (rrow+i,acol,_("39. lround"));
-    mvprintw (rrow+i,bcol,_("40. lrint"));
+    mvprintw (rrow+i,acol,_("23. fmin"));
+
     mvprintw(row-2,0,_("select or 0. to Exit: "));
     scanw("%d", &value);
     refresh();
@@ -107,11 +84,114 @@ int print_menu()
     return value;
 }
 
-int addf (float a, float b)
+int read_val1 (float *a)
 {
+	char *pelem=_("Give me the number: ");
 	float r;
-	r = a + b;
-	printf ("%f",r);
+	
+	int row,col;
+	
+	clear();
+	getmaxyx(stdscr,row,col);
+	mvprintw ((row/2)-2, (col-strlen(pelem))/2,"%s",pelem);
+	scanw("%f", &r);
+	*a = r;
+	refresh();        
+	return 0;
+}
+
+int read_val2 (float *b)
+{
+	char *selem=_("Give me the second number: ");
+	int row,col;
+	float r;
+	
+	clear();
+	getmaxyx(stdscr,row,col);
+	mvprintw ((row/2)-2, (col-strlen(selem))/2,"%s",selem);
+	scanw("%f", &r);
+	*b = r;
+	refresh();        
+	return 0;
+}
+
+
+int print_res (float r)
+{
+	char *resul=_("the result is: ");
+	int row,col;
+	
+	clear();
+	getmaxyx(stdscr,row,col);
+	mvprintw ((row/2)-2, (col-strlen(resul))/2,"%s %2.2f",resul,r);
+	getch();
+	refresh();        
+	return 0;
+}
+
+int print_errordc ()
+{
+	char *resul=_("Error Division by 0: ");
+	int row,col;
+	
+	clear();
+	getmaxyx(stdscr,row,col);
+	mvprintw ((row/2)-2, (col-strlen(resul))/2,"%s",resul);
+	getch();
+	refresh();        
+	return 0;
+}
+
+
+int addf ()
+{
+	float a=1,b=1;
+	read_val1(&a);
+	read_val2(&b);
+	print_res (a+b);
+	return 0;
+}
+
+int subsf ()
+{
+	float a,b;
+	read_val1(&a);
+	read_val2(&b);
+	print_res (a-b);
+	return 0;
+}
+
+int mulf ()
+{
+	float a=1,b=1;
+	read_val1(&a);
+	read_val2(&b);
+	print_res (a*b);
+	return 0;
+}
+
+int divf ()
+{
+	float a=1,b=1;
+	read_val1(&a);
+	read_val2(&b);
+	if (b!=0){
+		print_res (a/b);
+	} 
+	else
+	{
+		print_errordc();
+	}
+	
+	return 0;
+}
+
+int sinfu()
+{
+	float a,r;
+	read_val1(&a);
+	r=sin(a);
+	print_res (r);
 	return 0;
 }
 
@@ -134,7 +214,24 @@ int selectv(int s)
 	else {
 		switch(s) {
 			case 1:
-			addf(3, 5);
+			addf();
+			break;
+			case 2:
+			subsf();
+			break;
+			case 3:
+			mulf();
+			break;
+			case 4:
+			divf();
+			break;
+			case 5:
+			sinfu();
+			break;
+			
+			
+			
+
 		}
 	}
 	return 0;
@@ -144,10 +241,9 @@ int selectv(int s)
 int main(int argc, char **argv)
 {
 	int v;
-	char *pelem=_("Give me the first number: ");
-	char *selem=_("Give me the second number: ");
-	char *elem=_("Give me the number: ");
-	char *resul=_("the result is: ");
+	
+	//char *elem=_("Give me the operator: ");
+	
 	
 	bind_textdomain_codeset ("calculadora", "UTF-8");
     setlocale(LC_ALL, "");
@@ -158,7 +254,7 @@ int main(int argc, char **argv)
     v=print_menu();
     selectv(v);
     endwin();
-    printf ("\n%d\n", v);
+    
     
     return 0;
 }
