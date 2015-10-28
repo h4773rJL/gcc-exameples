@@ -40,7 +40,7 @@ int print_menu()
     getmaxyx(stdscr,row,col);    
     acol=2; bcol=(col/2)+2;
     char *tit=_("Cientific Calculator");
-    
+	clear();
     mvprintw (rrow, (col-strlen(tit))/2,"%s",tit);    
     mvprintw (rrow+i,acol,_("1.  add"));
     mvprintw (rrow+i,bcol,_("2.  Subtract"));
@@ -251,9 +251,14 @@ int main(int argc, char **argv)
     textdomain("calculadora");
     
     initscr();    
-    v=print_menu();
-    selectv(v);
-    endwin();
+    
+    do{
+		v=print_menu();
+		selectv(v);
+		endwin();
+		}while(v!=0);
+    
+    
     
     
     return 0;
