@@ -1,0 +1,142 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR h4773r
+# This file is distributed under the same license as the calculadora package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: calculadora 0.1\n"
+"Report-Msgid-Bugs-To: heatseeker.persa@gmail.com\n"
+"POT-Creation-Date: 2015-10-27 23:50-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: calculadora.c:45
+msgid "1.  add"
+msgstr ""
+
+#: calculadora.c:58
+msgid "10. acos"
+msgstr ""
+
+#: calculadora.c:60
+msgid "11. asin"
+msgstr ""
+
+#: calculadora.c:61
+msgid "12. square"
+msgstr ""
+
+#: calculadora.c:63
+msgid "13. pow"
+msgstr ""
+
+#: calculadora.c:64
+msgid "14. log"
+msgstr ""
+
+#: calculadora.c:66
+msgid "15. log10"
+msgstr ""
+
+#: calculadora.c:67
+msgid "16. ldexp"
+msgstr ""
+
+#: calculadora.c:69
+msgid "17. exp"
+msgstr ""
+
+#: calculadora.c:70
+msgid "18. cosh"
+msgstr ""
+
+#: calculadora.c:72
+msgid "19. sinh"
+msgstr ""
+
+#: calculadora.c:46
+msgid "2.  Subtract"
+msgstr ""
+
+#: calculadora.c:73
+msgid "20. tanh"
+msgstr ""
+
+#: calculadora.c:75
+msgid "21. isnan"
+msgstr ""
+
+#: calculadora.c:76
+msgid "22. fmax"
+msgstr ""
+
+#: calculadora.c:78
+msgid "23. fmin"
+msgstr ""
+
+#: calculadora.c:48
+msgid "3.  multiply"
+msgstr ""
+
+#: calculadora.c:49
+msgid "4.  Divide"
+msgstr ""
+
+#: calculadora.c:51
+msgid "5.  sine"
+msgstr ""
+
+#: calculadora.c:52
+msgid "6.  cosine"
+msgstr ""
+
+#: calculadora.c:54
+msgid "7.  tangent"
+msgstr ""
+
+#: calculadora.c:55
+msgid "8.  atan"
+msgstr ""
+
+#: calculadora.c:57
+msgid "9.  atan2"
+msgstr ""
+
+#: calculadora.c:42
+msgid "Cientific Calculator"
+msgstr ""
+
+#: calculadora.c:134
+msgid "Error Division by 0: "
+msgstr ""
+
+#: calculadora.c:89
+msgid "Give me the number: "
+msgstr ""
+
+#: calculadora.c:105
+msgid "Give me the second number: "
+msgstr ""
+
+#: calculadora.c:147
+msgid "This option is not valid!"
+msgstr ""
+
+#: calculadora.c:380
+msgid "see you later! "
+msgstr ""
+
+#: calculadora.c:80
+msgid "select or 0. to Exit: "
+msgstr ""
+
+#: calculadora.c:121
+msgid "the result is: "
+msgstr ""

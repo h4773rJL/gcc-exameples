@@ -1,0 +1,142 @@
+# Spanish translations for calculadora package.
+# Copyright (C) 2015 Tuxes Team
+# This file is distributed under the same license as the calculadora package.
+# Valffadir <heatseeker.persa@gmail.com>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: calculadora 0.1\n"
+"Report-Msgid-Bugs-To: heatseeker.persa@gmail.com\n"
+"POT-Creation-Date: 2015-10-27 21:34-0600\n"
+"PO-Revision-Date: 2015-10-27 21:37-0600\n"
+"Last-Translator: Valffadir <heatseeker.persa@gmail.com>\n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: calculadora.c:46
+msgid "1.  add"
+msgstr "1.  Suma"
+
+#: calculadora.c:59
+msgid "10. acos"
+msgstr "10. arcocoseno"
+
+#: calculadora.c:61
+msgid "11. asin"
+msgstr "11. arcoseno"
+
+#: calculadora.c:62
+msgid "12. square"
+msgstr "12. raiz cuadrada"
+
+#: calculadora.c:64
+msgid "13. pow"
+msgstr "13. potencia"
+
+#: calculadora.c:65
+msgid "14. log"
+msgstr "14. logaritmo"
+
+#: calculadora.c:67
+msgid "15. log10"
+msgstr "15. logaritmo base 10"
+
+#: calculadora.c:68
+msgid "16. ldexp"
+msgstr "16. ldexp"
+
+#: calculadora.c:70
+msgid "17. exp"
+msgstr "17. exponencial"
+
+#: calculadora.c:71
+msgid "18. cosh"
+msgstr "18. coseno hiperbólico"
+
+#: calculadora.c:73
+msgid "19. sinh"
+msgstr "19. seno hiperbólico"
+
+#: calculadora.c:47
+msgid "2.  Subtract"
+msgstr "2.  resta"
+
+#: calculadora.c:74
+msgid "20. tanh"
+msgstr "20. tangente hiperbólica"
+
+#: calculadora.c:76
+msgid "21. isnan"
+msgstr "21. ¿No es un número?"
+
+#: calculadora.c:77
+msgid "22. fmax"
+msgstr "22. máximo"
+
+#: calculadora.c:79
+msgid "23. fmin"
+msgstr "23. mínimo"
+
+#: calculadora.c:49
+msgid "3.  multiply"
+msgstr "3.  multiplicación"
+
+#: calculadora.c:50
+msgid "4.  Divide"
+msgstr "4.  división"
+
+#: calculadora.c:52
+msgid "5.  sine"
+msgstr "5.  seno"
+
+#: calculadora.c:53
+msgid "6.  cosine"
+msgstr "6.  coseno"
+
+#: calculadora.c:55
+msgid "7.  tangent"
+msgstr "7.  tangente"
+
+#: calculadora.c:56
+msgid "8.  atan"
+msgstr "8.  arcotangente"
+
+#: calculadora.c:58
+msgid "9.  atan2"
+msgstr "9.  arcotangente (4 cuadrantes)"
+
+#: calculadora.c:43
+msgid "Cientific Calculator"
+msgstr "Calculadora Científica"
+
+#: calculadora.c:381
+msgid "see you later! "
+msgstr "nos vemos mas tarde! "
+
+#: calculadora.c:135
+msgid "Error Division by 0: "
+msgstr "Error, División por 0: "
+
+#: calculadora.c:90
+msgid "Give me the number: "
+msgstr "Dame el número: "
+
+#: calculadora.c:106
+msgid "Give me the second number: "
+msgstr "Dame el segundo número: "
+
+#: calculadora.c:148
+msgid "This option is not valid!"
+msgstr "¡Ésta opción no es válida!"
+
+#: calculadora.c:81
+msgid "select or 0. to Exit: "
+msgstr "Seleccione 0 para Salir: "
+
+#: calculadora.c:122
+msgid "the result is: "
+msgstr "El resultado es: "
