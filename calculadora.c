@@ -377,7 +377,7 @@ int fminfu()
 
 int selectv(int s)
 {
-	char *exmes=_("Do you really exit? ");
+	char *exmes=_("see you later! ");
 	char ex[]="n";
 	int row,col;	
 	
