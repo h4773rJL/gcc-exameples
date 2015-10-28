@@ -142,6 +142,19 @@ int print_errordc ()
 	return 0;
 }
 
+int print_not_option ()
+{
+	char *resul=_("This option is not valid!");
+	int row,col;
+	
+	clear();
+	getmaxyx(stdscr,row,col);
+	mvprintw ((row/2)-2, (col-strlen(resul))/2,"%s",resul);
+	getch();
+	refresh();        
+	return 0;
+}
+
 
 int addf ()
 {
@@ -195,6 +208,172 @@ int sinfu()
 	return 0;
 }
 
+int cosfu()
+{
+	float a,r;
+	read_val1(&a);
+	r=cos(a);
+	print_res (r);
+	return 0;
+}
+
+int tangentfu()
+{
+	float a,r;
+	read_val1(&a);
+	r=tan(a);
+	print_res (r);
+	return 0;
+}
+
+int atanfu()
+{
+	float a,r;
+	read_val1(&a);
+	r=atan(a);
+	print_res (r);
+	return 0;
+}
+
+int atan2fu()
+{
+	float a,b,r;
+	read_val1(&a);
+	read_val2(&b);
+	r=atan2(a,b);
+	print_res (r);
+	return 0;
+}
+
+int acosfu()
+{
+	float a,r;
+	read_val1(&a);
+	r=acos(a);
+	print_res (r);
+	return 0;
+}
+
+int asinfu()
+{
+	float a,r;
+	read_val1(&a);
+	r=asin(a);
+	print_res (r);
+	return 0;
+}
+
+int sqrtfu()
+{
+	float a,r;
+	read_val1(&a);
+	r=sqrt(a);
+	print_res (r);
+	return 0;
+}
+
+int powfu()
+{
+	float a,b,r;
+	read_val1(&a);
+	read_val2(&b);
+	r=pow(a,b);
+	print_res (r);
+	return 0;
+}
+
+int logfu()
+{
+	float a,r;
+	read_val1(&a);
+	r=log(a);
+	print_res (r);
+	return 0;
+}
+
+int log10fu()
+{
+	float a,r;
+	read_val1(&a);
+	r=log10(a);
+	print_res (r);
+	return 0;
+}
+
+int ldexpfu()
+{
+	float a,b,r;
+	read_val1(&a);
+	read_val2(&b);
+	r=ldexp(a,b);
+	print_res (r);
+	return 0;
+}
+
+int expfu()
+{
+	float a,r;
+	read_val1(&a);
+	r=exp(a);
+	print_res (r);
+	return 0;
+}
+
+int coshfu()
+{
+	float a,r;
+	read_val1(&a);
+	r=cosh(a);
+	print_res (r);
+	return 0;
+}
+
+int sinhfu()
+{
+	float a,r;
+	read_val1(&a);
+	r=sinh(a);
+	print_res (r);
+	return 0;
+}
+
+int tanhfu()
+{
+	float a,r;
+	read_val1(&a);
+	r=tanh(a);
+	print_res (r);
+	return 0;
+}
+
+int isnanfu()
+{
+	float a,r;
+	read_val1(&a);
+	r=isnan(a);
+	print_res (r);
+	return 0;
+}
+
+int fmaxfu()
+{
+	float a,b,r;
+	read_val1(&a);
+	read_val2(&b);
+	r=fmax(a,b);
+	print_res (r);
+	return 0;
+}
+
+int fminfu()
+{
+	float a,b,r;
+	read_val1(&a);
+	read_val2(&b);
+	r=fmin(a,b);
+	print_res (r);
+	return 0;
+}
 
 int selectv(int s)
 {
@@ -228,8 +407,63 @@ int selectv(int s)
 			case 5:
 			sinfu();
 			break;
-			
-			
+			case 6:
+			cosfu();
+			break;
+			case 7:
+			tangentfu();
+			break;
+			case 8:
+			atanfu();
+			break;
+			case 9:
+			atan2fu();
+			break;
+			case 10:
+			acosfu();
+			break;
+			case 11:
+			asinfu();
+			break;
+			case 12:
+			sqrtfu();
+			break;
+			case 13:
+			powfu();
+			break;
+			case 14:
+			logfu();
+			break;
+			case 15:
+			log10fu();
+			break;
+			case 16:
+			ldexpfu();
+			break;
+			case 17:
+			expfu();
+			break;
+			case 18:
+			coshfu();
+			break;
+			case 19:
+			sinhfu();
+			break;
+			case 20:
+			tanhfu();
+			break;
+			case 21:
+			isnanfu();
+			break;
+			case 22:
+			fmaxfu();
+			break;
+			case 23:
+			fminfu();
+			break;
+			default:
+			print_not_option();
+			break;
 			
 
 		}
